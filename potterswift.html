@@ -13,37 +13,99 @@
 			... Julia's Swift Wizarding House ...
 		</title>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	</head>
-<body>
-		<!--Nav bar-->
-	<style>
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+	<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
 }
 
-li {
-  float: left;
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
 }
 
-a {
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
   display: block;
-  padding: 8px;
-  background-color: #89c2d9;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
 }
 </style>
 </head>
 <body>
 
-<ul>
-  <li><a href="index.html">Home</a></li>
-  <li><a href="AboutMe.html">Chapter 1: About Me</a></li>
-  <li><a href="podcasting.html">Chapter 2: Podcasting Me</a>></li>
-  <li><a href="volunteering.html">Chapter 3: Volunteering Me </a></li>
-  <li><a href="potterswift.html">Chapter 4: Fun Me</a></li>
-</ul>
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="index.html">Home</a>
+  <a href="AboutMe.html">Chapter 1: About Me</a>
+  <a href="podcasting.html">Chapter 2: Podcasting Me</a>
+  <a href="volunteering.html">Chapter 3: Volunteering Me </a>
+  <a href="potterswift.html">Chapter 4: Fun Me</a>
+</div>
+
+<div id="main">
+  <button class="openbtn" onclick="openNav()">☰ Open Me For More Content!</button>  
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+   
 	<h1>Welcome, wizards and muggles, to the glorious wizarding world of Harry Potter and Taylor Swift's fan club!</h1>
 		<!--Page Content-->
 	<p>
