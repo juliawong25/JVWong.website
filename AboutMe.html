@@ -14,36 +14,69 @@
 		</title>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	</head>
-<body>
-	<!--Nav bar-->
-	<style>
-ul {
-  list-style-type: none;
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
   margin: 0;
-  padding: 0;
-  overflow: hidden;
+  font-family: Calibri, Helvetica, sans-serif;
 }
 
-li {
-  float: left;
+/* Style the side navigation */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
 }
 
-a {
+
+/* Side navigation links */
+.sidenav a {
+  color: white;
+  padding: 16px;
+  text-decoration: none;
   display: block;
-  padding: 8px;
-  background-color: #89c2d9;
+}
+
+/* Change color on hover */
+.sidenav a:hover {
+  background-color: #1F7CEB;
+  color: SteelBlue;
+}
+
+/* Style the content */
+.content {
+  margin-left: 200px;
+  padding-left: 20px;
 }
 </style>
 </head>
 <body>
 
-<ul>
-  <li><a href="index.html">Home</a></li>
-  <li><a href="AboutMe.html">Chapter 1: About Me</a></li>
-  <li><a href="podcasting.html">Chapter 2: Podcasting Me</a>></li>
-  <li><a href="volunteering.html">Chapter 3: Volunteering Me </a></li>
-  <li><a href="potterswift.html">Chapter 4: Fun Me</a></li>
-</ul>
+<div class="sidenav">
+  <a href="index.html">Home</a>
+  <a href="AboutMe.html">Chapter 1: About Me</a>
+  <a href="podcasting.html">Chapter 2: Podcasting Me</a>
+  <a href="volunteering.html">Chapter 3: Volunteering Me</a>
+  <a href="potterswift.html">Chapter 4: Fun Me</a>
+</div>
+
+<div class="content">
+  <h2>CSS Template</h2>
+  <p>A full-height, fixed sidenav and content.</p>
+</div>
+
+</body>
+
 	<!--Page Content-->
 <br>
 	<h1 style ="color:MidnightBlue;">Department of Networks!</h1>
